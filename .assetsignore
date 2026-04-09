@@ -1,0 +1,7 @@
+node_modules
+.git
+worker
+deploy.sh
+deploy-dev.sh
+.assetsignore
+*.md
