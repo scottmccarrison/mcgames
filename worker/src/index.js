@@ -1,5 +1,4 @@
 // games-portal worker - static asset serving for mccarrison.me/games
-// No API routes needed; the ASSETS binding handles all static files.
 
 export default {
   async fetch(request, env) {
@@ -11,6 +10,12 @@ export default {
       return Response.redirect(url.origin + prefix + '/', 301);
     }
 
-    // Everything else is handled by the ASSETS binding automatically
+    // Strip prefix and serve static assets
+    let path = url.pathname;
+    if (path.startsWith(prefix + '/')) path = path.slice(prefix.length) || '/';
+
+    const assetUrl = new URL(request.url);
+    assetUrl.pathname = path;
+    return env.ASSETS.fetch(new Request(assetUrl.toString(), request));
   },
 };
