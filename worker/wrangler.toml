@@ -1,0 +1,16 @@
+name = "games-portal"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+routes = [
+  { pattern = "mccarrison.me/games", zone_name = "mccarrison.me" },
+  { pattern = "mccarrison.me/games/*", zone_name = "mccarrison.me" },
+]
+
+[vars]
+PATH_PREFIX = "/games"
+
+[assets]
+directory = "../"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
