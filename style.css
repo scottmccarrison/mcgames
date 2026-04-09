@@ -71,8 +71,13 @@ a:hover {
 .top-bar-inner strong {
   color: var(--text);
 }
-.top-bar-right {
+.no-tracking {
   margin-left: auto;
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.top-bar-right {
   font-style: italic;
 }
 
