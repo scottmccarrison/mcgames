@@ -421,6 +421,9 @@ a:hover {
 .game-thumb-art .golf-flag { color: #ff4444; font-size: 22px; }
 .game-thumb-art .golf-ball { color: #eee; font-size: 10px; }
 .game-thumb-art .soon-icon { font-size: 28px; opacity: 0.4; }
+.game-thumb-art .worm { font-size: 22px; }
+.game-thumb-art .bomb { font-size: 18px; }
+.game-thumb-art .boom { font-size: 22px; }
 
 .game-info {
   padding: 12px;
